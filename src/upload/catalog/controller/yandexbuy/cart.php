@@ -199,7 +199,7 @@ class ControllerYandexbuyCart extends Controller
 							$id = $result['code'];
 							$types = $this->config->get('ya_pokupki_carrier');
 							$type = isset($types[$id]) ? $types[$id] : 'POST';
-							if ($quote && $quote['quote']['error'] === false)
+							if ($quote && $quote['error'] === false)
 							{
 								$carriers[$k] = array(
 									'id' => $result['extension_id'],
